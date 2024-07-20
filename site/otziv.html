@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #reviews {
+            margin-top: 20px;
+        }
+        .review {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .review .delete-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .review .delete-btn:hover {
+            background-color: #d00;
+        }
+        .back-to-home {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1rem;
+        }
+        .back-to-home a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .back-to-home a:hover {
+            text-decoration: underline;
+        }
+        .stars {
+            display: flex;
+            gap: 5px;
+        }
+        .stars input[type="radio"] {
+            display: none;
+        }
+        .stars label {
+            font-size: 1.5rem;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .stars input[type="radio"]:checked ~ label {
+            color: #ccc;
+        }
+        .stars input[type="radio"]:checked ~ label:nth-of-type(-n+5) {
+            color: gold;
+        }
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-to-home">
+        <a href="index.html">Вернуться на главную страницу</a>
+    </div>
+    
+    <h1>Оставьте отзыв</h1>
+    <form id="reviewForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="message">Отзыв:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br><br>
+        <label>Оценка:</label>
+        <div class="stars">
+            <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        </div>
+        <br><br>
+        <button type="submit">Отправить</button>
+    </form>
+    
+    <div id="reviews">
+        <h2>Отзывы:</h2>
+        <div id="reviewList"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

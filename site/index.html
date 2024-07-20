@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            position: relative;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 5rem;
+            color: #333;
+        }
+        .sto {
+            font-size: 1.5rem;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 1.5rem;
+            color: #007BFF;
+            text-decoration: none;
+            margin-top: 40px; /* Adjusted to create more space */
+        }
+        .price:hover {
+            text-decoration: underline;
+        }
+        .reviews-title {
+            font-size: 1.5rem;
+            color: #007BFF;
+            margin-top: 10px; /* Adjusted to be slightly lower */
+            text-decoration: none;
+        }
+        .reviews-title:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            position: absolute;
+            bottom: 20px; /* Adjusted since the image is removed */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+        .contact-info a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-info img {
+            display: block;
+            max-width: 100%;
+            margin-top: 10px; /* Adjust margin for spacing */
+            cursor: pointer; /* Добавлен курсор указывающий на курсоре */
+        }
+        .logo {
+            position: absolute;
+            top: 140px;
+            left: 200px;
+            max-width: 150px; /* Adjusted max width for the logo */
+        }
+        .gaik {
+            position: absolute;
+            bottom: 140px;
+            left: 200px;
+            max-width: 150px; /* Adjusted max width for gaik */
+        }
+		        .otv {
+            position: absolute;
+            bottom: 430px;
+            left: 1100px;
+            max-width: 250px; /* Adjusted max width for otv */
+        }
+		        .molot {
+            position: absolute;
+            bottom: 140px;
+            left: 1200px;
+            max-width: 150px; /* Adjusted max width for gaik */
+        }
+
+    </style>
+</head>
+<body>
+    <img src="gae.png" alt="Логотип" class="logo">
+    <img src="gaik.png" alt="Gaik" class="gaik">
+	<img src="otv.png" alt="Otv" class="otv">
+	<img src="molot.png" alt="Molot" class="molot">
+	
+    
+    <h1>СТО</h1>
+    
+    <a href="price.html" class="price">Виды работ</a>
+    
+    <div class="contact-info">
+        Контактная информация
+        <div>
+            Номер телефона: +77017163541
+            <br>
+            Адрес: Сайрамская 186/1
+            <br>
+            
+            <a href="https://2gis.kz/shymkent/geo/70000001026127546" target="_blank">
+                <img src="images.png" alt="2ГИС картинка">
+            </a>
+        </div>
+    </div>
+    
+    <a href="otziv.html" class="reviews-title">Отзывы</a>
+    
+</body>
+</html>
+
